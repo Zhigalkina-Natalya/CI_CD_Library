@@ -1,0 +1,38 @@
+[
+{
+    "model": "library.author",
+    "pk": 1,
+    "fields": {
+        "first_name": "Лев",
+        "last_name": "Толстой",
+        "birth_date": "1828-09-09"
+    }
+},
+{
+    "model": "library.author",
+    "pk": 2,
+    "fields": {
+        "first_name": "Федор",
+        "last_name": "Достоевский",
+        "birth_date": "1821-11-11"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+        "title": "Война и мир",
+        "publication_date": "1870-01-01",
+        "author": 1
+    }
+},
+{
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+        "title": "Преступление и наказание",
+        "publication_date": "1866-01-01",
+        "author": 2
+    }
+}
+]
