@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 import os
+import sys
 
 from django.conf.global_settings import STATIC_ROOT
 from dotenv import load_dotenv
@@ -163,3 +164,19 @@ CACHES = {
 #         "KEY_PREFIX": "Library_project",  # можно любое имя проекта
 #     }
 # }
+
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'test_db.sqlite3',
+        }
+    }
+
+
+if 'test' in sys.argv:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        }
+    }
